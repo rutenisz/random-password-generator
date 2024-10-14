@@ -23,4 +23,11 @@ const generateRandomPassword = () => {
 
 document
   .getElementById("btn")
-  .addEventListener("click", generateRandomPassword());
+  .addEventListener("click", generateRandomPassword);
+
+const copyPassword = () => {
+  passwordBox.select();
+  document.execCommand("copy");
+};
+
+document.getElementById("copyImg").addEventListener("click", copyPassword);
